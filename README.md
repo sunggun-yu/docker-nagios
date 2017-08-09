@@ -17,7 +17,7 @@ docker pull sunggun/nagios
 
 ```bash
 docker run --name nagios -d \
-  -v <your-nagios-etc-directory>:/opt/nagios/etc/ \
+  -v <your-nagios-etc-directory>:/usr/local/nagios/etc/ \
   -h <your-hostname>  \
   -p 80:80 sunggun/nagios:4.3.2
 ```
