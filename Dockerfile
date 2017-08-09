@@ -201,9 +201,9 @@ COPY nagios/sbin/pagerduty.cgi /usr/local/nagios/sbin/pagerduty.cgi
 # Create working directory for customized config files
 RUN set -x \
     && mkdir -p /var/opt/nagios \
-    && mkdir -p /var/opt/nagios/etc/servers \
-    && cp -r /usr/local/nagios/etc /var/opt/nagios/etc \
-    && cp -r /usr/local/nagios/var /var/opt/nagios/var \
+    && mkdir -p /usr/local/nagios/etc/servers \
+    && cp -R /usr/local/nagios/etc /var/opt/nagios \
+    && cp -R /usr/local/nagios/var /var/opt/nagios \
     && chown -R nagios:nagios /var/opt/nagios/etc \
     && chown -R nagios:nagios /var/opt/nagios/var
 
